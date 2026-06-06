@@ -2,6 +2,89 @@ import React from 'react'
 import Cards from './components/Cards'
 
 const App = () => {
+
+  const companies = [
+  {
+    dateposted: "10 weeks ago",
+    img: "https://logo.clearbit.com/google.com",
+    pay: "$150/hr",
+    post: "Agentic AI Engineer",
+    company: "Google",
+    location: "Gurgaon, India",
+  },
+  {
+    dateposted: "8 weeks ago",
+    img: "https://logo.clearbit.com/microsoft.com",
+    pay: "$140/hr",
+    post: "Full Stack Developer",
+    company: "Microsoft",
+    location: "Hyderabad, India",
+  },
+  {
+    dateposted: "6 weeks ago",
+    img: "https://logo.clearbit.com/amazon.com",
+    pay: "$145/hr",
+    post: "Frontend Developer",
+    company: "Amazon",
+    location: "Bangalore, India",
+  },
+  {
+    dateposted: "5 weeks ago",
+    img: "https://logo.clearbit.com/meta.com",
+    pay: "$160/hr",
+    post: "React Developer",
+    company: "Meta",
+    location: "Remote",
+  },
+  {
+    dateposted: "4 weeks ago",
+    img: "https://logo.clearbit.com/apple.com",
+    pay: "$170/hr",
+    post: "Software Engineer",
+    company: "Apple",
+    location: "Mumbai, India",
+  },
+  {
+    dateposted: "3 weeks ago",
+    img: "https://logo.clearbit.com/netflix.com",
+    pay: "$155/hr",
+    post: "UI Engineer",
+    company: "Netflix",
+    location: "Remote",
+  },
+  {
+    dateposted: "2 weeks ago",
+    img: "https://logo.clearbit.com/adobe.com",
+    pay: "$135/hr",
+    post: "Frontend Engineer",
+    company: "Adobe",
+    location: "Noida, India",
+  },
+  {
+    dateposted: "1 week ago",
+    img: "https://logo.clearbit.com/oracle.com",
+    pay: "$130/hr",
+    post: "Java Developer",
+    company: "Oracle",
+    location: "Pune, India",
+  },
+  {
+    dateposted: "5 days ago",
+    img: "https://logo.clearbit.com/salesforce.com",
+    pay: "$145/hr",
+    post: "Cloud Developer",
+    company: "Salesforce",
+    location: "Bangalore, India",
+  },
+  {
+    dateposted: "2 days ago",
+    img: "https://logo.clearbit.com/nvidia.com",
+    pay: "$180/hr",
+    post: "AI/ML Engineer",
+    company: "NVIDIA",
+    location: "Remote",
+  },
+];
   return (
     <div className="parent">
 
@@ -37,7 +120,18 @@ const App = () => {
       <span><button>Apply Now</button></span>
     </div>
       </div>
-      <Cards img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW5OOTSjztEAvNrC_Q0TlJnowxBqko2KcbsA&s" pay="150$/hr" post="Agentic AI" company="Google" location="Gurgaon,India"/>
+      {/* <Cards dateposted="10week ago" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW5OOTSjztEAvNrC_Q0TlJnowxBqko2KcbsA&s" pay="150$/hr" post="Agentic AI" company="Google" location="Gurgaon,India"/> */}
+    
+   {companies.map((elem) => (
+  <Cards  dateposted={elem.dateposted}
+    img={elem.img}
+    pay={elem.pay}
+    post={elem.post}
+    company={elem.company}
+    location={elem.location} />
+))}
+   
+   
     </div>
 
   )

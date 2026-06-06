@@ -23,7 +23,7 @@ const Cards = (props) => {
     <div className="company-details">
       <span>
 
-      <h4>{props.company}</h4> <h6>5 days ago</h6>
+      <h4>{props.company}</h4> <h6>{props.dateposted}</h6>
       </span>
       <h2 className="post">{props.post}</h2>
       <span >
